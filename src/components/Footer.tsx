@@ -10,21 +10,14 @@ const Footer = () => {
       className="py-12 border-t border-border bg-muted/20"
     >
       <div className="container">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6">
           <div className="flex items-center gap-4">
-            <img src={logo} alt="ROI Analytic" className="h-10 w-auto" />
+            <img src={logo} alt="ROI ANALYTIC" className="h-10 w-auto" />
           </div>
 
           <p className="text-sm text-muted-foreground text-center">
-            © 2026 ROI Analytic. Publicidad digital enfocada en resultados.
+            © 2026 ROI ANALYTIC. Publicidad digital enfocada en resultados.
           </p>
-
-          <a
-            href="mailto:roianalytic@hotmail.com"
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-          >
-            roianalytic@hotmail.com
-          </a>
         </div>
       </div>
     </motion.footer>

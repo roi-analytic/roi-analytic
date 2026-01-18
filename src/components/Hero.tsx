@@ -64,9 +64,8 @@ const Hero = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8"
             >
-              Diseñamos y gestionamos campañas de Google Ads y Meta Ads 
-              enfocadas exclusivamente en rentabilidad. Captamos clientes 
-              listos para comprar.
+              Diseñamos y gestionamos campañas de Google Ads enfocadas 
+              exclusivamente en rentabilidad. Captamos clientes listos para comprar.
             </motion.p>
 
             <motion.div
@@ -105,7 +104,7 @@ const Hero = () => {
                     <TrendingUp className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <div>
-                    <p className="text-3xl font-bold font-display text-foreground">+40%</p>
+                    <p className="text-3xl font-bold font-display text-foreground">-40%</p>
                     <p className="text-sm text-muted-foreground">Reducción coste por lead</p>
                   </div>
                 </div>

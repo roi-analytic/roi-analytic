@@ -1,5 +1,21 @@
 import { motion } from "framer-motion";
-import { TrendingUp, Users, Target, Clock, Star, Shield } from "lucide-react";
+import { TrendingUp, Users, Target, Clock, Star, Shield, Quote } from "lucide-react";
+import mudanzasLogo from "@/assets/mudanzas-express-365-logo.png";
+
+const reviews = [
+  {
+    name: "Laia Morales Castellote",
+    text: "Lo recomiendo mucho, el servicio es estupendo, hacen su trabajo bien hecho, son rápidos y puntuales, además son muy amables y cuidadosos con las cosas. Todo llegó en perfecto estado y la mudanza fue mucho más fácil de lo que esperaba. Sin duda volvería a contar con ellos.",
+    rating: 5,
+    timeAgo: "Hace 3 semanas"
+  },
+  {
+    name: "Anna Maria SG",
+    text: "Nuestra experiencia ha sido más que buena, han venido puntuales, han ido como un rayo y nos han montado todo perfecto. No esperaba que fuera todo tan rápido y que trabajaran con tanta eficiencia. Estamos muy contentos. Además son unos chicos muy majos y trabajadores, no han parado ni un solo momento. También le hicieron la mudanza a mis padres y ellos también quedaron muy satisfechos. Por todo ello, gracias. 100% recomendable.",
+    rating: 5,
+    timeAgo: "Hace 5 años"
+  }
+];
 
 const Results = () => {
   return (
@@ -13,7 +29,7 @@ const Results = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-accent text-accent-foreground text-sm font-medium mb-4">
-            Caso de éxito
+            Casos de éxito
           </span>
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Resultados que hablan
@@ -26,13 +42,18 @@ const Results = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="max-w-4xl mx-auto mb-20"
+          className="max-w-4xl mx-auto mb-16"
         >
           <div className="relative rounded-3xl bg-gradient-cta p-1">
             <div className="rounded-[22px] bg-card p-8 md:p-12">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 rounded-xl bg-gradient-primary flex items-center justify-center">
-                  <TrendingUp className="w-6 h-6 text-primary-foreground" />
+              {/* Header with logo */}
+              <div className="flex items-center gap-4 mb-8">
+                <div className="w-16 h-16 rounded-xl bg-white flex items-center justify-center p-2 shadow-md">
+                  <img 
+                    src={mudanzasLogo} 
+                    alt="Mudanzas Express 365" 
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <div>
                   <h3 className="font-display text-2xl font-bold">Mudanzas Express 365</h3>
@@ -40,11 +61,17 @@ const Results = () => {
                 </div>
               </div>
 
-              <p className="text-lg text-muted-foreground mb-8">
-                Tras la implementación del sistema de Google Ads, se consiguió un crecimiento sostenido 
-                de llamadas cualificadas. En menos de 90 días, la empresa pasó a recibir una media de 
-                35-50 solicitudes mensuales con alta intención de contratación.
-              </p>
+              {/* Client testimonial style */}
+              <div className="relative mb-10">
+                <Quote className="absolute -top-2 -left-2 w-10 h-10 text-primary/20" />
+                <blockquote className="text-xl md:text-2xl text-foreground font-medium leading-relaxed pl-8">
+                  "Gracias a <span className="text-primary font-bold">ROI ANALYTIC</span>, hemos conseguido 
+                  pasar de depender del boca a boca a recibir <span className="text-primary font-bold">35-50 
+                  solicitudes mensuales</span> de clientes listos para contratar. El coste por lead se ha 
+                  reducido un <span className="text-primary font-bold">40%</span> y la calidad de los 
+                  contactos es excelente."
+                </blockquote>
+              </div>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <motion.div
@@ -52,7 +79,7 @@ const Results = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
-                  className="text-center"
+                  className="text-center p-4 rounded-xl bg-muted/50"
                 >
                   <div className="text-3xl md:text-4xl font-bold font-display text-gradient-primary mb-1">
                     -40%
@@ -65,7 +92,7 @@ const Results = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 }}
-                  className="text-center"
+                  className="text-center p-4 rounded-xl bg-muted/50"
                 >
                   <div className="text-3xl md:text-4xl font-bold font-display text-gradient-primary mb-1">
                     35-50
@@ -78,12 +105,12 @@ const Results = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4 }}
-                  className="text-center"
+                  className="text-center p-4 rounded-xl bg-muted/50"
                 >
                   <div className="text-3xl md:text-4xl font-bold font-display text-gradient-primary mb-1">
                     90
                   </div>
-                  <p className="text-sm text-muted-foreground">Días de implementación</p>
+                  <p className="text-sm text-muted-foreground">Días implementación</p>
                 </motion.div>
 
                 <motion.div
@@ -91,7 +118,7 @@ const Results = () => {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5 }}
-                  className="text-center"
+                  className="text-center p-4 rounded-xl bg-muted/50"
                 >
                   <div className="text-3xl md:text-4xl font-bold font-display text-gradient-primary mb-1">
                     Alta
@@ -100,6 +127,65 @@ const Results = () => {
                 </motion.div>
               </div>
             </div>
+          </div>
+        </motion.div>
+
+        {/* Google Reviews Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="max-w-4xl mx-auto mb-20"
+        >
+          {/* Google rating header */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-card shadow-card">
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <span className="text-2xl font-bold font-display">4.9</span>
+              <span className="text-muted-foreground">·</span>
+              <span className="text-muted-foreground">230 reseñas en Google</span>
+            </div>
+          </div>
+
+          {/* Reviews grid */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {reviews.map((review, index) => (
+              <motion.div
+                key={review.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-card rounded-2xl p-6 shadow-card"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                    <span className="text-lg font-bold text-primary">
+                      {review.name.charAt(0)}
+                    </span>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-foreground">{review.name}</h4>
+                    <div className="flex items-center gap-2 mt-1">
+                      <div className="flex items-center gap-0.5">
+                        {[...Array(review.rating)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                      </div>
+                      <span className="text-xs text-muted-foreground">{review.timeAgo}</span>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {review.text}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
 
@@ -112,7 +198,7 @@ const Results = () => {
           className="text-center mb-12"
         >
           <h3 className="font-display text-2xl md:text-3xl font-bold">
-            ¿Por qué ROI Analytic?
+            ¿Por qué ROI ANALYTIC?
           </h3>
         </motion.div>
 
@@ -131,7 +217,7 @@ const Results = () => {
             {
               icon: Clock,
               title: "Optimización continua",
-              description: "Revisión y ajuste semanal de campañas para maximizar resultados.",
+              description: "Revisión y ajuste diario de campañas para maximizar resultados.",
             },
             {
               icon: Star,
@@ -141,7 +227,7 @@ const Results = () => {
             {
               icon: Shield,
               title: "Garantía de 30 días",
-              description: "Si no cumplimos, devolvemos el 100% del coste de gestión.",
+              description: "Si no cumplimos con lo acordado en el contrato, devolvemos el 100% del coste de gestión.",
             },
             {
               icon: TrendingUp,
