@@ -1,60 +1,21 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Calendar, Clock, Shield, MessageCircle, Send, ArrowRight } from "lucide-react";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import {
+  Calendar,
+  Clock,
+  Shield,
+  MessageCircle,
+  ArrowRight,
+} from "lucide-react";
 
-const CALENDLY_URL = "https://calendly.com/ali-hourag/30min";
+const CALENDLY_URL = "https://calendly.com/roianalytic/30min";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: ""
-  });
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Create mailto link with form data
-    const subject = encodeURIComponent(`Consulta de ${formData.name} - ROI Analytic`);
-    const body = encodeURIComponent(
-      `Nombre: ${formData.name}\n` +
-      `Email: ${formData.email}\n` +
-      `Teléfono: ${formData.phone}\n\n` +
-      `Mensaje:\n${formData.message}`
-    );
-    
-    window.location.href = `mailto:roianalytic@hotmail.com?subject=${subject}&body=${body}`;
-    
-    toast({
-      title: "¡Formulario enviado!",
-      description: "Se abrirá tu cliente de correo para enviar el mensaje.",
-    });
-
-    setIsSubmitting(false);
-    setFormData({ name: "", email: "", phone: "", message: "" });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
-
   return (
     <section id="contacto" className="section-padding relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-cta opacity-5" />
-      
+
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -77,92 +38,12 @@ const Contact = () => {
             ¿Hablamos?
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-            Sesión inicial de 10 minutos para valorar si encaja con tu negocio. 
+            Sesión inicial de 10 minutos para valorar si encaja con tu negocio.
             Sin compromiso ni coste.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-          >
-            <div className="bg-card rounded-2xl p-8 shadow-card">
-              <h3 className="font-display text-xl font-bold mb-6">Envíanos un mensaje</h3>
-              
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Nombre *</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    type="text"
-                    placeholder="Tu nombre"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="bg-background"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email *</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="tu@email.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="bg-background"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Teléfono</Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="+34 600 000 000"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="bg-background"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="message">Mensaje *</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="Cuéntanos sobre tu negocio y qué necesitas..."
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={4}
-                    className="bg-background resize-none"
-                  />
-                </div>
-
-                <Button 
-                  type="submit" 
-                  variant="hero" 
-                  size="lg" 
-                  className="w-full"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Enviando..." : "Enviar mensaje"}
-                  <Send className="w-5 h-5" />
-                </Button>
-              </form>
-            </div>
-          </motion.div>
-
+        <div className="max-w-4xl mx-auto">
           {/* Calendly Section */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -177,23 +58,27 @@ const Contact = () => {
                   <Calendar className="w-6 h-6 text-secondary-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-display text-xl font-bold">Reserva una llamada</h3>
-                  <p className="text-sm text-muted-foreground">10 min · Sin compromiso</p>
+                  <h3 className="font-display text-xl font-bold">
+                    Reserva una llamada
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    30 min · Sin compromiso
+                  </p>
                 </div>
               </div>
 
               <p className="text-muted-foreground mb-6">
-                Agenda una sesión gratuita de 10 minutos para conocer tu negocio y 
-                valorar si podemos ayudarte a conseguir más clientes con Google Ads.
+                Agenda una sesión gratuita de 30 minutos para conocer tu negocio
+                y valorar si podemos ayudarte a conseguir más clientes con
+                Google Ads.
               </p>
 
-              <Button 
-                variant="hero" 
-                size="lg" 
-                className="w-full mb-8"
-                asChild
-              >
-                <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer">
+              <Button variant="hero" size="lg" className="w-full mb-8" asChild>
+                <a
+                  href={CALENDLY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Calendar className="w-5 h-5" />
                   Agendar sesión gratuita
                   <ArrowRight className="w-5 h-5" />
@@ -201,7 +86,9 @@ const Contact = () => {
               </Button>
 
               <div className="space-y-4 pt-6 border-t border-border">
-                <p className="text-sm font-medium text-foreground">¿Qué incluye la sesión?</p>
+                <p className="text-sm font-medium text-foreground">
+                  ¿Qué incluye la sesión?
+                </p>
                 <ul className="space-y-3 text-sm text-muted-foreground">
                   <li className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-secondary" />

@@ -28,7 +28,7 @@ const Header = () => {
           {[
             { label: "Sectores", id: "sectores" },
             { label: "Resultados", id: "resultados" },
-            { label: "¿Por qué ROI ANALYTIC?", id: "resultados" },
+            { label: "¿Por qué ROI ANALYTIC?", id: "why-roi-analytic" },
           ].map((item) => (
             <motion.button
               key={item.id}

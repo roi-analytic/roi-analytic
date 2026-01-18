@@ -8,7 +8,9 @@ const Hero = () => {
   };
 
   const scrollToServices = () => {
-    document.getElementById("servicios")?.scrollIntoView({ behavior: "smooth" });
+    document
+      .getElementById("servicios")
+      ?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -64,8 +66,9 @@ const Hero = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8"
             >
-              Diseñamos y gestionamos campañas de Google Ads enfocadas 
-              exclusivamente en rentabilidad. Captamos clientes listos para comprar.
+              Diseñamos y gestionamos campañas de Google Ads enfocadas
+              exclusivamente en rentabilidad. Captamos clientes listos para
+              comprar.
             </motion.p>
 
             <motion.div
@@ -77,9 +80,6 @@ const Hero = () => {
               <Button variant="hero" size="lg" onClick={scrollToContact}>
                 Solicitar sesión gratuita
                 <ArrowRight className="w-5 h-5" />
-              </Button>
-              <Button variant="hero-outline" size="lg" onClick={scrollToServices}>
-                Ver servicios
               </Button>
             </motion.div>
           </motion.div>
@@ -104,8 +104,12 @@ const Hero = () => {
                     <TrendingUp className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <div>
-                    <p className="text-3xl font-bold font-display text-foreground">-40%</p>
-                    <p className="text-sm text-muted-foreground">Reducción coste por lead</p>
+                    <p className="text-3xl font-bold font-display text-foreground">
+                      -40%
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Reducción coste por lead
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -120,8 +124,12 @@ const Hero = () => {
                 <div className="w-10 h-10 rounded-xl bg-gradient-secondary flex items-center justify-center mb-3">
                   <Target className="w-5 h-5 text-secondary-foreground" />
                 </div>
-                <p className="text-2xl font-bold font-display text-foreground">35-50</p>
-                <p className="text-sm text-muted-foreground">Leads/mes cualificados</p>
+                <p className="text-2xl font-bold font-display text-foreground">
+                  35-50
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Leads/mes cualificados
+                </p>
               </motion.div>
 
               <motion.div
@@ -134,7 +142,9 @@ const Hero = () => {
                 <div className="w-10 h-10 rounded-xl bg-gradient-primary flex items-center justify-center mb-3">
                   <BarChart3 className="w-5 h-5 text-primary-foreground" />
                 </div>
-                <p className="text-2xl font-bold font-display text-foreground">30 días</p>
+                <p className="text-2xl font-bold font-display text-foreground">
+                  30 días
+                </p>
                 <p className="text-sm text-muted-foreground">Garantía total</p>
               </motion.div>
             </div>
