@@ -64,12 +64,8 @@ const Results = () => {
               {/* Client testimonial style */}
               <div className="relative mb-10">
                 <Quote className="absolute -top-2 -left-2 w-10 h-10 text-primary/20" />
-                <blockquote className="text-xl md:text-2xl text-foreground font-medium leading-relaxed pl-8">
-                  "Gracias a <span className="text-primary font-bold">ROI ANALYTIC</span>, hemos conseguido 
-                  pasar de depender del boca a boca a recibir <span className="text-primary font-bold">35-50 
-                  solicitudes mensuales</span> de clientes listos para contratar. El coste por lead se ha 
-                  reducido un <span className="text-primary font-bold">40%</span> y la calidad de los 
-                  contactos es excelente."
+              <blockquote className="text-xl md:text-2xl text-foreground font-medium leading-relaxed pl-8">
+                  "Antes dependíamos casi solo del boca a boca. Desde que trabajamos con <span className="text-primary font-bold">ROI Analytic</span> empezamos a recibir solicitudes de clientes de forma constante todos los meses, y además son contactos que realmente quieren contratar. Para nosotros ha sido un cambio enorme."
                 </blockquote>
               </div>
 

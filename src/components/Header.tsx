@@ -26,9 +26,9 @@ const Header = () => {
 
         <nav className="hidden md:flex items-center gap-8">
           {[
-            { label: "Servicios", id: "servicios" },
             { label: "Sectores", id: "sectores" },
             { label: "Resultados", id: "resultados" },
+            { label: "¿Por qué ROI ANALYTIC?", id: "resultados" },
           ].map((item) => (
             <motion.button
               key={item.id}

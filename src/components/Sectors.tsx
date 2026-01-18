@@ -10,7 +10,6 @@ const sectors = [
     features: [
       "Campañas para implantes dentales y ortodoncia",
       "Segmentación geográfica precisa por clínica",
-      "Landing pages optimizadas para conversión",
       "Seguimiento de llamadas y formularios"
     ],
     treatments: ["Implantes", "Invisalign", "Estética dental", "Ortodoncia", "Blanqueamiento"],
