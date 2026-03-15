@@ -113,7 +113,10 @@
       "sectorPlaceholder": "Select your sector",
       "message": "How can we help?",
       "messagePlaceholder": "Tell us briefly what you need...",
-      "submit": "Send message"
+      "submit": "Send message",
+      "submitSending": "Sending...",
+      "success": "Message sent. We'll get back to you soon.",
+      "error": "Could not send. Please try again later."
     },
     "validation": {
       "required": "Required field",

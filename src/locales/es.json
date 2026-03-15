@@ -113,7 +113,10 @@
       "sectorPlaceholder": "Selecciona tu sector",
       "message": "¿Cómo podemos ayudarte?",
       "messagePlaceholder": "Cuéntanos brevemente qué necesitas...",
-      "submit": "Enviar mensaje"
+      "submit": "Enviar mensaje",
+      "submitSending": "Enviando...",
+      "success": "Mensaje enviado. Te contactaremos pronto.",
+      "error": "No se pudo enviar. Inténtalo de nuevo más tarde."
     },
     "validation": {
       "required": "Campo obligatorio",

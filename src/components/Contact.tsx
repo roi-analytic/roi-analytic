@@ -28,7 +28,9 @@ import {
   Send,
   Clock,
   Shield,
+  Loader2,
 } from "lucide-react";
+import { toast } from "sonner";
 import { PHONE_COUNTRIES, PHONE_COUNTRY_CODES } from "@/lib/phoneCountries";
 import { cn } from "@/lib/utils";
 
@@ -85,16 +87,40 @@ const Contact = () => {
     },
   });
 
-  const onSubmit = (data: ContactFormValues) => {
+  const onSubmit = async (data: ContactFormValues) => {
     const trimmed = data.phone.trim();
     const parsed = parsePhoneNumberFromString(trimmed, data.countryCode as CountryCode);
     const fullPhone = parsed?.formatInternational() ?? `${data.countryCode} ${trimmed}`;
-    const sectorLabel = t(`contact.sectors.${data.sector}`);
-    const subject = encodeURIComponent(`Consulta de ${data.company} - ${sectorLabel}`);
-    const body = encodeURIComponent(
-      `Empresa: ${data.company}\nEmail: ${data.email}\nTeléfono: ${fullPhone}\nSector: ${sectorLabel}\n\nMensaje:\n${data.message ?? ""}`
-    );
-    window.location.href = `mailto:roianalytic@hotmail.com?subject=${subject}&body=${body}`;
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          company: data.company,
+          email: data.email,
+          phone: fullPhone,
+          sector: data.sector,
+          message: data.message ?? "",
+        }),
+      });
+      const json = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        throw new Error(json.error ?? t("contact.form.error"));
+      }
+      toast.success(t("contact.form.success"));
+      form.reset({
+        company: "",
+        email: "",
+        countryCode: defaultCountryCode,
+        phone: "",
+        sector: undefined,
+        message: "",
+      });
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : t("contact.form.error"));
+    }
   };
 
   return (
@@ -277,9 +303,24 @@ const Contact = () => {
                   )}
                 />
 
-                <Button variant="hero" size="lg" type="submit" className="w-full">
-                  <Send className="w-5 h-5" />
-                  {t("contact.form.submit")}
+                <Button
+                  variant="hero"
+                  size="lg"
+                  type="submit"
+                  className="w-full"
+                  disabled={form.formState.isSubmitting}
+                >
+                  {form.formState.isSubmitting ? (
+                    <>
+                      <Loader2 className="w-5 h-5 animate-spin" />
+                      {t("contact.form.submitSending")}
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      {t("contact.form.submit")}
+                    </>
+                  )}
                 </Button>
               </form>
             </Form>

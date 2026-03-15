@@ -113,7 +113,10 @@
       "sectorPlaceholder": "Selecteer uw sector",
       "message": "Hoe kunnen we helpen?",
       "messagePlaceholder": "Vertel kort wat u nodig heeft...",
-      "submit": "Bericht versturen"
+      "submit": "Bericht versturen",
+      "submitSending": "Versturen...",
+      "success": "Bericht verzonden. We nemen snel contact op.",
+      "error": "Verzenden mislukt. Probeer het later opnieuw."
     },
     "validation": {
       "required": "Verplicht veld",
