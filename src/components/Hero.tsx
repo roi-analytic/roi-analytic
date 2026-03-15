@@ -78,34 +78,38 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right - Single stat card */}
+          {/* Right - KPI cards grid */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="relative flex items-center justify-center"
+            className="grid grid-cols-2 gap-4"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              whileHover={{ y: -5, scale: 1.02 }}
-              className="glass-card rounded-2xl p-8 shadow-card max-w-sm w-full"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 rounded-xl bg-gradient-primary flex items-center justify-center">
-                  <TrendingUp className="w-7 h-7 text-primary-foreground" />
-                </div>
-                <div>
-                  <p className="text-4xl font-bold font-display text-foreground">
-                    -40%
+            {[
+              { icon: TrendingUp, value: "-40%", label: "Reducción coste por lead" },
+              { icon: Shield, value: "30 días", label: "Garantía de resultados" },
+              { icon: Target, value: "4.5x", label: "ROAS medio de campañas" },
+              { icon: TrendingUp, value: "+120%", label: "Leads cualificados" },
+            ].map((kpi, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 + i * 0.1 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="glass-card rounded-2xl p-6 shadow-card"
+              >
+                <div className="flex flex-col gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
+                    <kpi.icon className="w-5 h-5 text-primary-foreground" />
+                  </div>
+                  <p className="text-2xl sm:text-3xl font-bold font-display text-foreground">
+                    {kpi.value}
                   </p>
-                  <p className="text-sm text-muted-foreground">
-                    Reducción coste por lead
-                  </p>
+                  <p className="text-sm text-muted-foreground">{kpi.label}</p>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </motion.div>
         </div>
       </div>
