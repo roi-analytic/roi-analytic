@@ -11,22 +11,46 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Google Ads specialists",
-    "title": "Digital advertising that",
-    "titleHighlight": "delivers results",
-    "subtitle": "We design and manage Google Ads campaigns focused exclusively on profitability. We attract customers ready to buy.",
-    "cta": "Request free session",
-    "kpis": {
-      "leadCost": "Lead cost reduction",
-      "guarantee": "Results guarantee",
-      "roas": "Average campaign ROAS",
-      "leads": "Qualified leads"
+    "badge": "15 years of experience in Google Ads",
+    "title": "We've generated over €5,000,000 for our clients",
+    "titleHighlight": "with Google Ads",
+    "subtitle": "15 years of experience designing campaigns focused 100% on profitability. If we don't improve your numbers in 30 days, we refund your management fee.",
+    "cta": "Get your free account audit"
+  },
+  "impact": {
+    "badge": "Real results",
+    "title": "Our impact in numbers",
+    "metrics": {
+      "years": {
+        "value": "15+",
+        "description": "Years of experience. We've survived every Google algorithm change."
+      },
+      "revenue": {
+        "value": "€5M+",
+        "description": "Generated for our clients. The number that backs us up."
+      },
+      "roas": {
+        "value": "4.5x",
+        "description": "Average campaign ROAS. Real profitability, not vanity."
+      },
+      "leadCost": {
+        "value": "-40%",
+        "description": "Average lead cost reduction for our clients."
+      }
+    }
+  },
+  "ourStory": {
+    "title": "We don't experiment with your budget",
+    "description": "In 15 years we've seen it all. We've scaled accounts during economic crises, survived dozens of Google algorithm updates, and operated in almost every industry. We don't experiment with your budget — we apply methodologies validated over more than a decade.",
+    "guarantee": {
+      "title": "30-day guarantee",
+      "description": "We're so confident in our 15 years of experience that we take the risk for you. If we don't meet the agreed objectives in 30 days, we refund 100% of our management fee. No small print."
     }
   },
   "sectors": {
     "badge": "Sectors",
     "title": "Industries we work with",
-    "subtitle": "We work with premium businesses across sectors, applying Google Ads strategies tailored to each industry to maximise profitability.",
+    "subtitle": "In our 15-year track record, we've validated winning strategies in these sectors:",
     "items": {
       "jewelry": {
         "title": "Jewellery",
@@ -98,8 +122,8 @@
     }
   },
   "contact": {
-    "title": "Let's talk",
-    "subtitle": "Tell us about your business and we'll get in touch to see how we can help.",
+    "title": "Ready for your campaigns to actually work?",
+    "subtitle": "You've been investing in Google Ads and the results don't reflect what you deserve. We know exactly why. In a 30-minute call we'll tell you what's failing and what we'd do differently. No commitment, no fluff.",
     "form": {
       "company": "Company name *",
       "companyPlaceholder": "Your company",
@@ -113,7 +137,7 @@
       "sectorPlaceholder": "Select your sector",
       "message": "How can we help?",
       "messagePlaceholder": "Tell us briefly what you need...",
-      "submit": "Send message",
+      "submit": "Book my free audit",
       "submitSending": "Sending...",
       "success": "Message sent. We'll get back to you soon.",
       "error": "Could not send. Please try again later."

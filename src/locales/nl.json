@@ -11,22 +11,46 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Specialisten in Google Ads",
-    "title": "Online advertentie die",
-    "titleHighlight": "resultaat levert",
-    "subtitle": "We ontwerpen en beheren Google Ads-campagnes uitsluitend gericht op rendement. We bereiken klanten die klaar zijn om te kopen.",
-    "cta": "Gratis sessie aanvragen",
-    "kpis": {
-      "leadCost": "Lagere kosten per lead",
-      "guarantee": "Resultaatgarantie",
-      "roas": "Gemiddelde ROAS van campagnes",
-      "leads": "Gekwalificeerde leads"
+    "badge": "15 jaar ervaring in Google Ads",
+    "title": "We hebben meer dan €5.000.000 gegenereerd voor onze klanten",
+    "titleHighlight": "met Google Ads",
+    "subtitle": "15 jaar ervaring met het ontwerpen van campagnes 100% gericht op rendement. Als we uw cijfers niet verbeteren binnen 30 dagen, krijgt u het beheergeld terug.",
+    "cta": "Gratis account audit aanvragen"
+  },
+  "impact": {
+    "badge": "Echte resultaten",
+    "title": "Onze impact in cijfers",
+    "metrics": {
+      "years": {
+        "value": "15+",
+        "description": "Jaar ervaring. We hebben elke Google-algoritmewijziging overleefd."
+      },
+      "revenue": {
+        "value": "€5M+",
+        "description": "Gegenereerd voor onze klanten. Het cijfer dat ons ondersteunt."
+      },
+      "roas": {
+        "value": "4,5x",
+        "description": "Gemiddelde campagne-ROAS. Echt rendement, geen ijdelheid."
+      },
+      "leadCost": {
+        "value": "-40%",
+        "description": "Gemiddelde verlaging van de kosten per lead voor onze klanten."
+      }
+    }
+  },
+  "ourStory": {
+    "title": "We experimenteren niet met uw budget",
+    "description": "In 15 jaar hebben we alles gezien. We hebben accounts opgeschaald tijdens economische crises, tientallen Google-algoritmeupdates overleefd en in bijna elke branche gewerkt. We experimenteren niet met uw budget — we passen methodologieën toe die meer dan tien jaar zijn gevalideerd.",
+    "guarantee": {
+      "title": "30 dagen garantie",
+      "description": "We vertrouwen zo op onze 15 jaar ervaring dat we het risico voor u nemen. Als we de afgesproken doelen niet halen binnen 30 dagen, retourneren we 100% van onze beheerkosten. Geen kleine lettertjes."
     }
   },
   "sectors": {
     "badge": "Sectoren",
     "title": "Branches waarin we actief zijn",
-    "subtitle": "We werken met premium bedrijven in verschillende sectoren, met Google Ads-strategieën afgestemd op elke branche voor maximaal rendement.",
+    "subtitle": "In onze 15-jarige trackrecord hebben we winnende strategieën gevalideerd in deze sectoren:",
     "items": {
       "jewelry": {
         "title": "Juweliers",
@@ -98,8 +122,8 @@
     }
   },
   "contact": {
-    "title": "Laten we praten",
-    "subtitle": "Vertel over uw bedrijf en we nemen contact op om te kijken hoe we kunnen helpen.",
+    "title": "Klaar om uw campagnes écht te laten werken?",
+    "subtitle": "U investeert al in Google Ads en de resultaten weerspiegelen niet wat u verdient. Wij weten precies waarom. In een gesprek van 30 minuten vertellen we u wat er mis gaat en wat we anders zouden doen. Zonder verplichting.",
     "form": {
       "company": "Bedrijfsnaam *",
       "companyPlaceholder": "Uw bedrijf",
@@ -113,7 +137,7 @@
       "sectorPlaceholder": "Selecteer uw sector",
       "message": "Hoe kunnen we helpen?",
       "messagePlaceholder": "Vertel kort wat u nodig heeft...",
-      "submit": "Bericht versturen",
+      "submit": "Gratis audit boeken",
       "submitSending": "Versturen...",
       "success": "Bericht verzonden. We nemen snel contact op.",
       "error": "Verzenden mislukt. Probeer het later opnieuw."
