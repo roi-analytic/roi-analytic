@@ -11,22 +11,46 @@
     "contact": "Contactar"
   },
   "hero": {
-    "badge": "Especialistas en Google Ads",
-    "title": "Publicidad digital que",
-    "titleHighlight": "genera resultados",
-    "subtitle": "Diseñamos y gestionamos campañas de Google Ads enfocadas exclusivamente en rentabilidad. Captamos clientes listos para comprar.",
-    "cta": "Solicitar sesión gratuita",
-    "kpis": {
-      "leadCost": "Reducción coste por lead",
-      "guarantee": "Garantía de resultados",
-      "roas": "ROAS medio de campañas",
-      "leads": "Leads cualificados"
+    "badge": "15 años de experiencia en Google Ads",
+    "title": "Generamos más de 5.000.000 € para nuestros clientes",
+    "titleHighlight": "con Google Ads",
+    "subtitle": "15 años de experiencia diseñando campañas enfocadas 100 % en rentabilidad. Si no mejoramos tus números en 30 días, te devolvemos el dinero de la gestión.",
+    "cta": "Quiero que analicéis mi cuenta"
+  },
+  "impact": {
+    "badge": "Resultados reales",
+    "title": "Nuestro impacto en datos",
+    "metrics": {
+      "years": {
+        "value": "+15",
+        "description": "Años de experiencia. Sobrevivimos todos los cambios de algoritmo de Google."
+      },
+      "revenue": {
+        "value": "+5M €",
+        "description": "Facturados para nuestros clientes. El dato que nos respalda."
+      },
+      "roas": {
+        "value": "4,5x",
+        "description": "ROAS medio de campañas. Rentabilidad real, no vanidad."
+      },
+      "leadCost": {
+        "value": "-40%",
+        "description": "Reducción media del coste por lead para nuestros clientes."
+      }
+    }
+  },
+  "ourStory": {
+    "title": "No experimentamos con tu presupuesto",
+    "description": "En 15 años hemos visto de todo. Hemos escalado cuentas en épocas de crisis, sobrevivido a decenas de actualizaciones del algoritmo de Google y operado en casi todas las industrias. No experimentamos con tu presupuesto; aplicamos metodologías validadas durante más de una década.",
+    "guarantee": {
+      "title": "Garantía de 30 días",
+      "description": "Confiamos tanto en nuestros 15 años de experiencia que asumimos el riesgo por ti. Si en 30 días no cumplimos los objetivos acordados, te devolvemos el 100 % del coste de nuestra gestión. Sin letras pequeñas."
     }
   },
   "sectors": {
     "badge": "Sectores",
     "title": "Industrias en las que operamos",
-    "subtitle": "Trabajamos con empresas premium de distintos sectores, aplicando estrategias de Google Ads adaptadas a cada industria para maximizar su rentabilidad.",
+    "subtitle": "En nuestros 15 años de trayectoria, hemos validado estrategias ganadoras en estos sectores:",
     "items": {
       "jewelry": {
         "title": "Joyerías",
@@ -98,8 +122,8 @@
     }
   },
   "contact": {
-    "title": "¿Hablamos?",
-    "subtitle": "Cuéntanos sobre tu negocio y te contactaremos para valorar cómo podemos ayudarte.",
+    "title": "¿Listo para que tus campañas trabajen de verdad?",
+    "subtitle": "Llevas tiempo invirtiendo en Google Ads y los resultados no reflejan lo que mereces. Nosotros sí sabemos por qué. En una llamada de 30 minutos te decimos exactamente qué está fallando y qué haríamos diferente. Sin compromiso, sin rodeos.",
     "form": {
       "company": "Nombre de empresa *",
       "companyPlaceholder": "Tu empresa",
@@ -113,7 +137,7 @@
       "sectorPlaceholder": "Selecciona tu sector",
       "message": "¿Cómo podemos ayudarte?",
       "messagePlaceholder": "Cuéntanos brevemente qué necesitas...",
-      "submit": "Enviar mensaje",
+      "submit": "Reservar mi auditoría gratuita",
       "submitSending": "Enviando...",
       "success": "Mensaje enviado. Te contactaremos pronto.",
       "error": "No se pudo enviar. Inténtalo de nuevo más tarde."

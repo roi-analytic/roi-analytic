@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp, Shield, Target } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -9,16 +9,8 @@ const Hero = () => {
     document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const kpis = [
-    { icon: TrendingUp, value: "-40%", labelKey: "hero.kpis.leadCost" },
-    { icon: Shield, value: "30 días", labelKey: "hero.kpis.guarantee" },
-    { icon: Target, value: "4.5x", labelKey: "hero.kpis.roas" },
-    { icon: TrendingUp, value: "+120%", labelKey: "hero.kpis.leads" },
-  ];
-
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero pt-20">
-      {/* Background decoration */}
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-hero pt-20">
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
           className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] rounded-full bg-primary/5"
@@ -33,85 +25,47 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left content */}
+        <div className="max-w-3xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="text-center lg:text-left"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent border border-primary/10 mb-6"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent border border-primary/10 mb-6"
-            >
-              <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-              <span className="text-sm font-medium text-accent-foreground">
-                {t("hero.badge")}
-              </span>
-            </motion.div>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
-            >
-              {t("hero.title")}{" "}
-              <span className="text-gradient-primary">{t("hero.titleHighlight")}</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8"
-            >
-              {t("hero.subtitle")}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <Button variant="hero" size="lg" onClick={scrollToContact}>
-                {t("hero.cta")}
-                <ArrowRight className="w-5 h-5" />
-              </Button>
-            </motion.div>
+            <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+            <span className="text-sm font-medium text-accent-foreground">
+              {t("hero.badge")}
+            </span>
           </motion.div>
 
-          {/* Right - KPI cards grid */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="grid grid-cols-2 gap-4 pb-6 sm:pb-0"
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
           >
-            {kpis.map((kpi, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 + i * 0.1 }}
-                whileHover={{ y: -5, scale: 1.02 }}
-                className="glass-card rounded-2xl p-6 shadow-card"
-              >
-                <div className="flex flex-col gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center">
-                    <kpi.icon className="w-5 h-5 text-primary-foreground" />
-                  </div>
-                  <p className="text-2xl sm:text-3xl font-bold font-display text-foreground">
-                    {kpi.value}
-                  </p>
-                  <p className="text-sm text-muted-foreground">{t(kpi.labelKey)}</p>
-                </div>
-              </motion.div>
-            ))}
+            {t("hero.title")}{" "}
+            <span className="text-gradient-primary">{t("hero.titleHighlight")}</span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"
+          >
+            {t("hero.subtitle")}
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+          >
+            <Button variant="hero" size="lg" onClick={scrollToContact}>
+              {t("hero.cta")}
+              <ArrowRight className="w-5 h-5" />
+            </Button>
           </motion.div>
         </div>
       </div>

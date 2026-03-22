@@ -65,7 +65,7 @@ export const SeoHead = () => {
         link.id = id;
         document.head.appendChild(link);
       }
-      link.hrefLang = localeToHreflang[l];
+      link.hreflang = localeToHreflang[l];
       link.href = `${base}/${l}${pathWithoutLang === "/" ? "" : pathWithoutLang}`;
     });
   }, [lang]);
